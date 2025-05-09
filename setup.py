@@ -28,12 +28,12 @@ if os.path.isfile("requirements.txt"):
 setup(
     name="number2words",
     version=get_version(),
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Reza Torabi",
+    author_email="rezatutor475@gmail.com",
     description="Convert numbers to words in English and Persian",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/number2words",
+    url="https://github.com/rezatutor475/number2words",
     packages=find_packages(exclude=["tests*", "examples"]),
     classifiers=[
         "Programming Language :: Python :: 3",
