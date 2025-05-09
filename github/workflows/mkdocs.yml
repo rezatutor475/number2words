@@ -1,0 +1,51 @@
+site_name: number2words
+site_description: Convert numbers to words in English and Persian
+site_author: Your Name
+site_url: https://yourprojectdomain.com
+repo_url: https://github.com/yourusername/number2words
+repo_name: yourusername/number2words
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            separate_signature: true
+  - glightbox
+  - section-index
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - API Reference:
+      - English Converter: reference/en.md
+      - Persian Converter: reference/fa.md
+  - CLI: reference/cli.md
+  - Contributing: contributing.md

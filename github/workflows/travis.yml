@@ -1,0 +1,43 @@
+language: python
+python:
+  - "3.8"
+  - "3.9"
+  - "3.10"
+
+install:
+  - pip install -r requirements.txt
+  - pip install -r doc_req.txt
+  - pip install twine
+
+script:
+  - flake8 number2words tests
+  - black --check .
+  - isort --check-only .
+  - mypy number2words
+  - pytest --cov=number2words
+
+after_success:
+  - codecov
+
+branches:
+  only:
+    - main
+
+cache:
+  pip: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+
+deploy:
+  provider: pypi
+  username: "__token__"
+  password:
+    secure: "$PYPI_API_TOKEN"
+  distributions: "sdist bdist_wheel"
+  skip_cleanup: true
+  on:
+    branch: main
+    tags: true
