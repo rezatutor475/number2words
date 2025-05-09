@@ -16,7 +16,7 @@
 ## نصب
 
 ```bash
-pip install git+https://github.com/yourusername/number2words.git
+pip install git+https://github.com/rezatutor475/number2words.git
 ```
 
 ## استفاده ساده
