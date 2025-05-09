@@ -1,0 +1,14 @@
+include README.md
+include requirements.txt
+include LICENSE
+include *.md
+
+recursive-include number2words *.py
+recursive-include tests *.py
+recursive-include docs *
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.pyo
+prune build
+global-exclude *.egg-info
